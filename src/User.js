@@ -9,14 +9,16 @@ import React from 'react'
 // },
 
 const User = (props) => {
-    const {id, email, first_name, last_name, avatar} = props
+    const {id, email, first_name, last_name, avatar, deleteUser} = props
+    
     return (
-        <div>
+        <div style={{border:'12px solid black', margin:'20px'}}>
         <p>id: {id}</p>
         <p>email: {email}</p>
         <p>first_name: {first_name}</p>
         <p>last_name: {last_name}</p>
         <p>avatar: {avatar}</p>
+        <button onClick={() => deleteUser(id)}>delete user with id {id}</button>
         </div>
     )
 }
